@@ -1,0 +1,47 @@
+<div id = "homepage">
+
+
+
+<div align = "left">
+<h1>Find A Tutor By Subject Name</h1> <br>
+<input #subjectname type="text" name="search" placeholder = "Subject" #search/>
+<button (click) = "findTutorBySubject(subjectname.value)">Search</button>
+</div>
+
+<div align = "right">
+    <button id ="addtutor" (click) = "addTutor()">Add a User</button>
+    <button id = "sortbysalary" (click) = "Sort()">Find Cheapest Tutor</button>
+    <button id = "students" (click) = "FindStudents()">Students</button>
+    <button id = "salaries" (click) = "Increase()"> Edit Salaries</button>
+    <button id = "logoutbutton" (click) = "Logout()"> Logout</button>
+</div>
+
+<div id = "tutors">
+    <table>
+        
+        <div *ngIf="tutors.length>0">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Salary($ per hour)</td>
+                <td>User ID</td>
+                <td>Gender</td>
+                <td>Course Code</td>
+            </tr>    
+        
+        
+            <tr *ngFor = "let tutor of tutors">
+                <td>{{tutor.FirstName}}</td>
+                <td>{{tutor.LastName}} </td>
+                <td>{{tutor.Salary}}</td>
+                <td>{{tutor.idUser}}</td>
+                <td>{{tutor.Gender}} </td>
+                <td>{{tutor.CourseCode}}</td>
+            </tr>
+        
+        </div>
+    </table>
+</div>
+    
+
+</div>

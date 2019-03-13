@@ -1,0 +1,27 @@
+<label for="">Increase salaries of tutors by: </label>
+<input #salary type="text" name=""/>
+<br />
+<br />
+
+<label for="">Subject: </label>
+<input #subject type="text" name=""/> 
+<br />
+<br />
+
+<button (click) = "increaseSalary(salary.value, subject.value)">Submit</button>
+
+
+
+<div id = "tutors">
+    <ul>
+        <li id = "tutorList" *ngFor = "let tutor of response">
+            {{tutor.FirstName}}
+            {{tutor.LastName}} <br>
+            {{tutor.Salary}}
+            {{tutor.idUser}}<br>
+            {{tutor.Gender}} <br>
+            {{tutor.CourseCode}}
+        </li>
+    </ul>
+</div>
+<button (click) = "goToHome()">Back</button>

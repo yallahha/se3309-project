@@ -1,0 +1,44 @@
+<h1>
+    Find Students By Tutors Subject
+</h1>
+<label for="">Tutorid: </label>
+<input #tutorid type="text" name=""/>
+<br />
+<br />
+
+<label for="">Subject: </label>
+<input #subject type="text" name=""/>
+<br />
+<br />
+
+<button (click) = "findStudents(tutorid.value, subject.value)">Submit</button>
+
+
+
+<div id = "students">
+    <table>
+        <div *ngIf="response.length>0">
+            <tr>
+                <td>idStudentAppt</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Course Code</td>
+            </tr>    
+            
+            <tr *ngFor = "let student of response">
+                <td>{{student.idStudentAppt}}</td>
+                <td>{{student.FirstName}}</td>
+                <td>{{student.LastName}} </td>
+                <td>{{student.Email}}</td>
+                <td>{{student.CourseCode}}</td>
+            </tr>
+        </div>
+    </table>
+    
+    
+    
+    
+    
+</div>
+<button (click) = "goToHome()">Back</button>

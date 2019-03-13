@@ -1,0 +1,33 @@
+<h1>
+    Find Cheapest Tutor By Subject
+</h1>
+<label for="">Subject: </label> 
+<input #subject type="text" name=""/>
+<button (click) = "FindTutors(subject.value)">Submit</button>
+
+<div id = "tutors">
+      <table>
+        <div *ngIf="response.length>0">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Salary($ per hour)</td>
+                <td>User ID</td>
+                <td>Gender</td>
+                <td>Course Code</td>
+                <td>Price Per Hour</td>
+            </tr>    
+            <tr *ngFor = "let tutor of response">
+                <td>{{tutor.FirstName}}</td>
+                <td>{{tutor.LastName}} </td>
+                <td>{{tutor.Salary}}</td>
+                <td>{{tutor.idUser}}</td>
+                <td>{{tutor.Gender}} </td>
+                <td>{{tutor.CourseCode}}</td>
+                <td>{{tutor.Salary}}</td>
+            </tr>
+        </div>
+    </table>
+
+</div>
+<button (click) = "goToHome()">Back</button>

@@ -1,0 +1,75 @@
+<h1>
+    Create a User
+</h1>
+<div align = "left">
+    <table>
+        <tr>
+            <td>
+                <label>Password: </label>
+            </td>        
+            <td>
+                <input #password type="password"/><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>First Name: </label>
+            </td>
+            <td>
+                <input #firstname type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Last Name: </label>
+            </td>
+            <td>
+                <input #lastname type="text"/><br>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Email:</label> 
+            </td>
+            <td>
+                <input #email type="email"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Salary </label>
+            </td>
+            <td>    
+                <input #salary type="text"/><br>
+            </td>
+        </tr>
+    
+    <tr>
+        <td> <label>Date of Birth </label></td>
+        <td><input #dob type="text" placeholder= "yyyy-dd-mm"/><br></td>
+    </tr>
+    
+   <tr>
+        <td><label>CourseCode </label></td>
+        <td><input #courseCode type="text"/><br></td>
+    </tr>
+    
+    <tr>
+        <td><label>Rating </label></td>
+        <td> <input #rating type="text"/><br></td>
+    </tr>
+    <tr>
+        <td>  <label>Gender </label></td>
+        <td><input #gender type="text" /><br></td>
+    </tr>
+    
+   <tr>
+        <td> <label>PhoneNumber </label></td>
+        <td><input #phoneNumder type="text" /><br></td>
+    </tr>
+  
+
+    </table>
+    <button (click) = "Submit(password.value,firstname.value, lastname.value, email.value, gender.value, dob.value, phoneNumder.value, courseCode.value, rating.value)">Submit</button>
+</div>
+<button (click) = "goToHome()">Back</button>
